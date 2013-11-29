@@ -171,6 +171,10 @@ case $FRAMEWORK in
     mkdir -p app/tmp/{logs,cache,sessions,tests}
     mkdir -p app/tmp/cache/{models,persistent,views}
     ;;
+"PHP/Laravel")
+    echo "Laravel Framework detected" | indent_head
+    WEBCONTENT=${WEBCONTENT:-'public'}
+    ;;
 *)
     WEBCONTENT=${WEBCONTENT:-''}
     ;;

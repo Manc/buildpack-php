@@ -30,6 +30,8 @@ elif [[ (-f system/classes/kohana.php || -f system/classes/Kohana.php) && -d app
     echo "PHP/Kohana"
 elif [[ -f app/Console/cake ]]; then
     echo "PHP/CakePhp"
+elif [[ -d vendor/laravel/framework && $(grep 'LARAVEL_START' bootstrap/autoload.php) ]]; then
+    echo "PHP/Laravel"
 else
     echo "PHP"
 fi
